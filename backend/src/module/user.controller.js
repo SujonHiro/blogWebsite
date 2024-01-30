@@ -6,14 +6,14 @@ const createUser=(req,res)=>{
     })
 }
 
-const getUser=(req,res)=>{
+/*const getUser=(req,res)=>{
     res.status(200).json({
         status:true,
         message:"User get Successfully"
     })
-}
+}*/
 
 export default {
-    createUser,
-    getUser
+    createUser
+
 }
