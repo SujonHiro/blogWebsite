@@ -24,7 +24,31 @@ const loginUserService=async (loginData)=>{
 
     return {accessToken}
 }
+
+const getUserServices=async (userData)=>{
+
+    if(userData.role !=="admin"){
+        throw new Error("UnAuthorized");
+    }
+    const users=await userModel.find()
+    return users;
+}
+
+const getSpecificUserService=async (userEmail,userData)=>{
+    if(userData.role==="admin"){
+        const user=await userModel.findOne({email: userEmail})
+        return user;
+    }
+    if(userData.role==="user"){
+        const user=await userModel.findOne({email: userEmail})
+        return user;
+    }
+    return "unauthorized service";
+
+}
 export default {
     createUserService,
-    loginUserService
+    loginUserService,
+    getUserServices,
+    getSpecificUserService
 }

@@ -33,13 +33,43 @@ const loginUser=async (req,res)=>{
 
 }
 
-/*const getUser=(req,res)=>{
-    res.status(200).json({
-        status:true,
-        message:"User get Successfully"
-    })
-}*/
+const getUser=async (req,res)=>{
+    try{
+        const userData=req.user;
+        const users=await userService.getUserServices(userData)
+        res.status(200).json({
+            status:true,
+            data:users
+        })
+    }catch(error) {
+        res.status(400).json({
+            status:'false',
+            data:error.message
+        })
+    }
+}
+
+const getSpecificUser=async (req,res)=>{
+    try{
+        const userData=req.user;
+        const userEmail=userData.email
+        const user=await userService.getSpecificUserService(userEmail,userData)
+        res.status(200).json({
+            status:true,
+            data:user
+        })
+    }catch(error) {
+        res.status(400).json({
+            status:'false',
+            data:error.message
+        })
+    }
+}
+
 
 export default {
-    createUser,loginUser
+    createUser,
+    loginUser,
+    getUser,
+    getSpecificUser
 }
