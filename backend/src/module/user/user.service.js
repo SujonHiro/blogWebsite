@@ -1,5 +1,5 @@
 import userModel from "./user.model.js";
-import {createToken} from "../helper/jwtHelper.js";
+import {createToken} from "../../helper/jwtHelper.js";
 
 const createUserService=async (userData)=>{
     const user=await userModel.findOne({email:userData.email});

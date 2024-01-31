@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userSechema=new mongoose.Schema({
+const userSchema=new mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -20,7 +20,12 @@ const userSechema=new mongoose.Schema({
     },
     writtenBlogs:[{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"Blog",
+        ref:"blogs",
+        default:[]
+    }],
+    sharedBlogs:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"blogs",
         default:[]
     }],
     profileImg:{
@@ -41,5 +46,5 @@ const userSechema=new mongoose.Schema({
     timestamps:true,
     versionKey:false
 })
-const userModel=mongoose.model('users',userSechema);
+const userModel=mongoose.model('users',userSchema);
 export default userModel;
