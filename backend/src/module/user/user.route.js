@@ -4,12 +4,10 @@ import auth from "../../middleware/auth.js";
 const router=express.Router()
 
 
-router.get('/',auth("admin"),userController.getUser)
+router.get('/',userController.getUser)
 router.get('/:email',auth("admin","user"),userController.getSpecificUser)
 router.post('/signup',userController.createUser)
 router.post('/login',userController.loginUser)
-
-
 
 
 export default router;

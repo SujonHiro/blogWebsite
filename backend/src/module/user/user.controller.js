@@ -36,7 +36,8 @@ const loginUser=async (req,res)=>{
 const getUser=async (req,res)=>{
     try{
         const userData=req.user;
-        const users=await userService.getUserServices(userData)
+        const {searchText}=req.query;
+        const users=await userService.getUserServices(userData,searchText)
         res.status(200).json({
             status:true,
             data:users
@@ -51,9 +52,8 @@ const getUser=async (req,res)=>{
 
 const getSpecificUser=async (req,res)=>{
     try{
-        const userData=req.user;
-        const userEmail=userData.email
-        const user=await userService.getSpecificUserService(userEmail,userData)
+        const userEmail=req.params.email
+        const user=await userService.getSpecificUserService(userEmail)
         res.status(200).json({
             status:true,
             data:user

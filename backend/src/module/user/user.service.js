@@ -25,26 +25,23 @@ const loginUserService=async (loginData)=>{
     return {accessToken}
 }
 
-const getUserServices=async (userData)=>{
+const getUserServices=async (userData,searchText)=>{
 
-    if(userData.role !=="admin"){
-        throw new Error("UnAuthorized");
+    let query={};
+    if(searchText){
+        query.$or=[
+            {name:{$regex:searchText,$options:"i"}},
+            {email:{$regex:searchText,$options:"i"}}
+        ]
     }
-    const users=await userModel.find()
+    const users= await userModel.find(query);
     return users;
 }
 
-const getSpecificUserService=async (userEmail,userData)=>{
-    if(userData.role==="admin"){
-        const user=await userModel.findOne({email: userEmail})
-        return user;
-    }
-    if(userData.role==="user"){
-        const user=await userModel.findOne({email: userEmail})
-        return user;
-    }
-    return "unauthorized service";
+const getSpecificUserService=async(userEmail)=>{
+        const user=await userModel.findOne({email: userEmail}).select("-password");
 
+        return user;
 }
 export default {
     createUserService,
