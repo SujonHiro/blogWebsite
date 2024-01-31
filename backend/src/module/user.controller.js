@@ -2,17 +2,35 @@ import userService from "./user.service.js"
 const createUser=async (req,res)=>{
     try{
         const userData=req.body;
-        const user=await userService.createUserService(userData)
+        const user=await userService.createUserService(userData);
         res.status(201).json({
             status:'success',
             data:user
         })
-    }catch (error) {
-        res.status(422).json({
-            status:'Unprocessable Entity',
-            data:error
+    }catch(error) {
+        res.status(400).json({
+            status:'false',
+            data:error.message
         })
     }
+}
+
+
+const loginUser=async (req,res)=>{
+    try{
+        const loginData=req.body;
+        const result=await userService.loginUserService(loginData)
+        res.status(200).json({
+            status:'success',
+            data:result
+        })
+    }catch(error) {
+        res.status(400).json({
+            status:'false',
+            data:error.message
+        })
+    }
+
 }
 
 /*const getUser=(req,res)=>{
@@ -23,5 +41,5 @@ const createUser=async (req,res)=>{
 }*/
 
 export default {
-    createUser
+    createUser,loginUser
 }
