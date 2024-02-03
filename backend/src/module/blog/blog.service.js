@@ -7,6 +7,8 @@ const createBlogService=async (userData,blogData)=>{
     const newBlog= await blogModel.create(blogData);
     return newBlog;
 }
+
+
 const updateBlogService = async (blogId, blogData) => {
     const query = { _id: blogId };
     if(!query){
@@ -15,6 +17,25 @@ const updateBlogService = async (blogId, blogData) => {
     const update = await blogModel.updateMany(query, { content:blogData.content, image:blogData.image});
     return update;
 };
+
+const getBlogsServices=async (searchText,limit)=>{
+    let query={};
+
+    if(searchText){
+        query.$or=[
+            {title:{$regex:searchText,$options:"i"}},
+            {content:{$regex:searchText,$options:"i"}}
+        ]
+    }
+    const blogs=await blogModel.find(query)
+        .limit(limit)
+    return blogs
+}
+
+const getSingleBlogService=async (blogId)=>{
+    const singleBlog=await blogModel.findById(blogId)
+    return singleBlog
+}
 export default {
-    createBlogService,updateBlogService
+    createBlogService,updateBlogService,getBlogsServices,getSingleBlogService
 }
