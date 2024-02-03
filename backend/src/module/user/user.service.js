@@ -40,7 +40,6 @@ const getUserServices=async (userData,searchText)=>{
 
 const getSpecificUserService=async(userEmail)=>{
         const user=await userModel.findOne({email: userEmail}).select("-password");
-
         return user;
 }
 export default {

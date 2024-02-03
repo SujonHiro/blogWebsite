@@ -32,11 +32,11 @@ const blogSchema=new mongoose.Schema({
         required:true,
         default:[]
     }],
-    shares:{
+    shares:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"users",
         default:[]
-    },
+    }],
     comments:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"comments",
