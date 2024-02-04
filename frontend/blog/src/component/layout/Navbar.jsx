@@ -58,30 +58,23 @@ const userNavigation = [
                             </div>
                         </div>
                     </div>
-                {/* hidden md:block*/}
+               
                 <div className='hidden md:block'>
-                    {/* ml-4 flex items-center md:ml-6*/}
                     <div className='ml-4 flex items-center md:ml-6'>
-                        {/* relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 */}
                         <button className='rounded-md bg-gradient-to-r from-blue-400 to-purple-400 font-semibold px-3 py-2 text-white hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
                            Login
                         </button>
-                        {/* relative ml-3*/}
                         <div className='relative ml-3'>
                             <div>
-                                {/*relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800*/}
                                 <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
-                                    {/*absolute inset-1.5*/}
                                     <span className='absolute inset-1.5'/>
-                                    {/*sr-only*/}
                                     <span className='sr-only'>view Profile</span>
-                                    {/*h-8 w-8 rounded-full*/}
                                     <img className='h-8 w-8 rounded-full' src={user.imageUrl} alt="profile" />
                                 </button>
                             </div>
                             {/*transition*/}
 
-                                {/*absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none*/}
+                                
                                 {isDropdownOpen && (
                                     <ul className='absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
                                     {
@@ -104,7 +97,7 @@ const userNavigation = [
                         </div>
                     </div>
                     {/* Mobile view*/}
-                    
+
                 </div>
             </div>
         </div>
