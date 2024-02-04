@@ -11,9 +11,7 @@ const postCommentService=async (userData,commentData)=>{
         blog
     })
     return res;
-
 }
-
 export default {
     postCommentService
 }
