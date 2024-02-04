@@ -2,6 +2,7 @@ import express from "express";
 const router=express.Router();
 import blogRoutes from "../module/blog/blog.routes.js"
 import userRoute from "../module/user/user.route.js"
+import commentRoute from "../module/comments/comment.route.js";
 const moduleRoutes=[
     {
         path:"/user",
@@ -10,6 +11,10 @@ const moduleRoutes=[
     {
         path: "/blogs",
         route: blogRoutes,
+    },
+    {
+        path: "/comment",
+        route: commentRoute,
     }
 ]
 
