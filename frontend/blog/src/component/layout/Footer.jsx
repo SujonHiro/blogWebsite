@@ -15,11 +15,11 @@ const Footer = () => {
                             <img className='h-8 w-8 block' src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
                             <p className=' my-2'>You can Write here anything like you story,book,article.Please give your feedback also me</p>
                             <div className='flex gap-4'>
-                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-slate-200 transition-all' href="https://www.facebook.com"><FaFacebookF color='#2d3350'/></a>
-                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-slate-200 transition-all' href="https://www.facebook.com"><FaXTwitter color='#2d3350'/></a>
-                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-slate-200 transition-all' href="https://www.facebook.com"><FaLinkedinIn color='#2d3350'/></a>
-                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-slate-200 transition-all' href="https://www.facebook.com"><AiFillInstagram color='#2d3350'/></a>
-                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-slate-200 transition-all' href="https://www.facebook.com"><FaGithub color='#2d3350'/></a>
+                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white'  href="https://www.facebook.com"><FaFacebookF  /></a>
+                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white' href="https://www.facebook.com"><FaXTwitter /></a>
+                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white' href="https://www.facebook.com"><FaLinkedinIn /></a>
+                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white' href="https://www.facebook.com"><AiFillInstagram /></a>
+                                <a className='inline-flex text-center p-2 rounded-full bg-gray-100 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white' href="https://www.facebook.com"><FaGithub /></a>
                             </div>
                         </div>
                         <div className='mx-2'>
