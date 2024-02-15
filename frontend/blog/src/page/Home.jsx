@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSection from '../component/HeroSection';
 import Feature from '../component/Feature';
+import Categories from '../component/Categories';
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
 
             <HeroSection/>
             <Feature/>
+            <Categories/>
         </div>
     );
 };
