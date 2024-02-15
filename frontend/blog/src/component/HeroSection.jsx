@@ -4,9 +4,11 @@ const HeroSection = () => {
   return (
     <>
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        <div className=" hidden md:block md:absolute md:-top-20 md:-left-56  bg-blue-600  rounded-full w-96 h-96  filter blur-3xl opacity-10 mix-blend-screen"></div>
-        <div className=" hidden md:block md:absolute md:top-28 md:-right-44 bg-purple-500  rounded-full w-96 h-96  filter blur-3xl opacity-10 mix-blend-screen"></div>
-        <div className="mt-32 z-50">
+        <div>
+        <div className="hidden md:block absolute -top-28 -left-56 bg-blue-600  rounded-full w-72 h-80  filter blur-3xl opacity-20 mix-blend-multiply"></div>
+        <div className="hidden md:block absolute top-28 -right-28 bg-purple-500  rounded-full w-72 h-80 filter blur-3xl opacity-20 mix-blend-multiply"></div>
+        </div>
+        <div className="mt-32 -z-10">
           <h1 className="text-[60px] linep-height-[1.2] font-black ">
             Hello 👋, we are <span className="text-blue-600">Blogger</span>,
             exploring <span className="text-blue-600">fashion</span>,{" "}

@@ -10,7 +10,7 @@ const Categories = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-7xl px-4 my-12 sm:px-6 lg:px-8'">
+      <div className="mx-auto max-w-5xl px-4 my-12 sm:px-6 lg:px-8'">
         <h1 className="text-3xl font-bold  text-center my-5">
           Popular Categories
         </h1>
