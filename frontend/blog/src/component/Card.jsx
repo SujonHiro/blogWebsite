@@ -28,8 +28,8 @@ Card.propTypes = {
     categoriesListName: PropTypes.string.isRequired, 
     categoriesListStyle:PropTypes.string,// Validate categoriesListName prop as a required string
     Cartitle: PropTypes.string.isRequired,
-    Gosomewhere: PropTypes.string.isRequired,
-    cardDescription: PropTypes.string.isRequired,
+    Gosomewhere: PropTypes.string,
+    cardDescription: PropTypes.string,
     imgageURL:PropTypes.string.isRequired
 };
 export default Card;

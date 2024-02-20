@@ -16,7 +16,7 @@ const Feature = () => {
                         categoriesListStyle={categoriesList[0].bgcolor}
                         Cartitle="It is during our darkest moments that we must focus to see the light"
                         Gosomewhere="Submit"
-                        cardDescription="You cannot too assiduously attend to Madame Duval herself; but I would wish you to mix as little as possible with her associates, who are not likely to be among those whose acquaintance would. who are not likely to be among those whose acquaintance would. who are not likely to be among those whose acquaintance would"
+                        cardDescription="You cannot too assiduously attend to Madame Duval herself; but I would wish you to mix as little as possible with her associates, who are not likely to be among those whose acquaintance would. who are not likely to be among those whose acquaintance would. who are not likely to be among those whose acquaintance would..."
                     />
                     </div>
                     <div className="col-span-1">
@@ -24,7 +24,7 @@ const Feature = () => {
                             <div className='md:flex md:flex-row md:justify-center'>
                                 <img className='md:w-44 md:h-100 sm:w-full sm:h-full rounded-lg' src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?crop=entropy&cs=tinysrgb&fit=max&fm=webp&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIzfHxmYXNoaW9uJTIwJTIwZmxvd2VyJTIwbGlmZXN0eWxlfGVufDB8fHx8MTY5MjQ0NTI1N3ww&ixlib=rb-4.0.3&q=80&w=2000" alt="" />
                                 <div>
-                                    <button className='ml-3 mt-4 bg-blue-100 px-4 py-0.5 border border-blue-600 rounded-full hover:bg-blue-400'>{categoriesList[1].name}</button>
+                                    <button className={`ml-3 mt-4 bg-${categoriesList[2].bgcolor}-100 px-4 py-0.5 border border-${categoriesList[2].bgcolor}-600 rounded-full hover:bg-${categoriesList[2].bgcolor}-400`}>{categoriesList[1].name}</button>
                                     <a href='/'><h3 className='text-2xl sm:pt-4 md:pt-0 lg:pt-0 ml-3 hover:underline hover:decoration-blue-500'>Never let your memories be greater than your dreams</h3></a>
                                 </div>
                             </div>
