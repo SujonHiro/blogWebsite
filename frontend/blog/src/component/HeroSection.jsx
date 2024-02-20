@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const HeroSection = () => {
   return (
@@ -23,7 +23,7 @@ const HeroSection = () => {
           </div>
           {/*rounded-md bg-gradient-to-r from-blue-600 to-purple-600 font-semibold px-3 py-2 text-white hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800*/}
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-white px-3 py-2 hover:opacity-85 my-4">
-            Join Now - it's free
+            Join Now - it&apos;s free
           </button>
         </div>
       </div>
