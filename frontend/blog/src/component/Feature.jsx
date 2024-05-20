@@ -10,14 +10,14 @@ const Feature = () => {
                 <h1 className='text-3xl font-bold  text-center my-20'>Feature Post</h1>
                 <div className='grid grid-cols-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4'>
                     <div className="md:row-span-3 col-span-1">
-                    <Card
-                        imgageURL="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?crop=entropy&cs=tinysrgb&fit=max&fm=webp&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHxmYXNoaW9uJTIwYmVhdXR5fGVufDB8fHx8MTY5MjQ0NTA2MHww&ixlib=rb-4.0.3&q=80&w=2000"
-                        categoriesListName={categoriesList[0].name}
-                        categoriesListStyle={categoriesList[0].bgcolor}
-                        Cartitle="It is during our darkest moments that we must focus to see the light"
-                        Gosomewhere="Submit"
-                        cardDescription="You cannot too assiduously attend to Madame Duval herself; but I would wish you to mix as little as possible with her associates, who are not likely to be among those whose acquaintance would. who are not likely to be among those whose acquaintance would. who are not likely to be among those whose acquaintance would"
-                    />
+                        <Card
+                            imgageURL="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?crop=entropy&cs=tinysrgb&fit=max&fm=webp&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHxmYXNoaW9uJTIwYmVhdXR5fGVufDB8fHx8MTY5MjQ0NTA2MHww&ixlib=rb-4.0.3&q=80&w=2000"
+                            categoriesListName={categoriesList[0].name}
+                            categoriesListStyle={categoriesList[0].bgcolor}
+                            Cartitle="It is during our darkest moments that we must focus to see the light"
+                            cardBtn="Submit"
+                            cardDescription="You cannot too assiduously attend to Madame Duval herself; but I would wish you to mix as little as possible with her associates, who are not likely to be among those whose acquaintance would. who are not likely to be among those whose acquaintance would. who are not likely to be among those whose acquaintance would"
+                        />
                     </div>
                     <div className="col-span-1">
                         <div className='w-full bg-white border border-slate-200 rounded-lg p-4'>

@@ -5,6 +5,7 @@ import cors from "cors";
 import hpp from "hpp";
 import httpStatus from "http-status";
 import dotenv from "dotenv"
+
 dotenv.config()
 
 import router from "./src/routes/routes.js"

@@ -1,5 +1,5 @@
-import React from 'react';
-import Author from '../component/author';
+
+import Author from '../component/Author';
 
 const AuthorPage = () => {
     return (

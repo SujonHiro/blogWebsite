@@ -39,7 +39,7 @@ const getUser=async (req,res)=>{
         const {searchText}=req.query;
         const users=await userService.getUserServices(userData,searchText)
         res.status(200).json({
-            status:true,
+            status:"success",
             data:users
         })
     }catch(error) {
