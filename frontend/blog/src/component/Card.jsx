@@ -4,7 +4,7 @@
 const Card = ({ children }) => {
     return (
         <>
-            <div className="flex flex-col group bg-dark  rounded-xl  shadow-sm border">
+            <div className="flex flex-col group bg-dark hover:border-transparent hover:shadow-lg transition-all duration-300  rounded-xl  shadow-sm border">
                 <div>
                     {children}
                 </div>

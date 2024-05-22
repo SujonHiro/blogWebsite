@@ -5,9 +5,9 @@ const postComment=async(req,res)=>{
         const userData=req.user;
         const commentData=req.body;
 
-        const result=await commentService.postCommentService(userData,commentData)
+        const result=await commentService.commentService(userData,commentData)
         res.status(200).json({
-            status:true,
+            status:"true",
             data:result
         });
     }catch(error) {

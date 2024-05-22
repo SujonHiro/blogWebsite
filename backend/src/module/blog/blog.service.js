@@ -20,7 +20,6 @@ const updateBlogService = async (blogId, blogData) => {
 
 const getBlogsServices=async (searchText,limit)=>{
     let query={};
-
     if(searchText){
         query.$or=[
             {title:{$regex:searchText,$options:"i"}},
@@ -29,6 +28,7 @@ const getBlogsServices=async (searchText,limit)=>{
     }
     const blogs=await blogModel.find(query)
         .limit(limit)
+        .populate("comments")
     return blogs
 }
 

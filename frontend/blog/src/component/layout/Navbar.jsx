@@ -1,4 +1,4 @@
-import {React,useState} from 'react';
+import {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaAlignJustify } from "react-icons/fa";
 import { IoCloseOutline } from "react-icons/io5";
@@ -64,9 +64,9 @@ const userNavigation = [
                
                         <div className='hidden md:block'>
                           <div className='ml-4 flex items-center md:ml-6'>
-                                <button className='rounded-md bg-gradient-to-r from-blue-600 to-purple-600 font-semibold px-3 py-2 text-white hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
-                                  Login
-                                </button>
+                                <a href='/register' className='rounded-md bg-gradient-to-r from-blue-600 to-purple-600 font-semibold px-3 py-2 text-white hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
+                                  Signup
+                                </a>
                                 <div className='relative ml-3'>
                                       <div>
                                           <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
@@ -99,7 +99,7 @@ const userNavigation = [
                               </div>
                       </div>
                       <div className='-mr-2 flex md:hidden'>
-                          {/*relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800*/}
+                          
                           <button className='relative inline-flex justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
                           onClick={() => setOpen(!open)}
                           >
@@ -116,7 +116,7 @@ const userNavigation = [
                 
             </div>
             {open ? (<div className='md:hidden'>
-                  {/*space-y-1 px-2 pb-3 pt-2 sm:px-3*/}
+
                   <div className='space-y-1 px-2 pb-3 pt-2 sm:px-3'>
                     {navigation.map((item) => (
                       <Link
@@ -161,7 +161,7 @@ const userNavigation = [
                 </div>
                 </div>
                 ):null}
-                  {/*border-t border-gray-700 pb-3 pt-4*/}
+                
       </nav>
     </div>
   );

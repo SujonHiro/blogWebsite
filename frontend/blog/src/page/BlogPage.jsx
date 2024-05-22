@@ -1,10 +1,10 @@
-import React from 'react';
-import Blogs from '../component/Blogs';
+import BlogDetails from "../component/BlogDetails";
+
 
 const BlogPage = () => {
     return (
         <div>
-            <Blogs/>
+            <BlogDetails/>
         </div>
     );
 };
