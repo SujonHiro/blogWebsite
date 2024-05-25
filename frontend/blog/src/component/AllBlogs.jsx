@@ -2,22 +2,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
 import { Link } from "react-router-dom"
+import{truncateText,formatDateString} from '../utility/blogHelper'
 
-function truncateText(text, maxLength) {
-    if (text.length <= maxLength) {
-        return text;
-    }
-    return text.slice(0, maxLength) + '...';
-}
-const formatDateString = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString(undefined, options);
-};
+
 const AllBlogs = () => {
-
     const [data, seData] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    
     async function fetchBlogs() {
         try {
             setLoading(true);
