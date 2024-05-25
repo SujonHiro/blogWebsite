@@ -34,7 +34,7 @@ const Feature = () => {
                                     />
                                     <div>
                                         <h5 className="text-sm text-gray-800">
-                                            Nahu
+                                            Nehu
                                         </h5>
                                     </div>
                                 </div>

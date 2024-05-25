@@ -18,7 +18,7 @@ const AllBlogs = () => {
     async function fetchBlogs() {
         try {
             setLoading(true);
-            const res = await axios.get('http://localhost:5000/api/v1/blogs/');
+            const res = await axios.get('http://localhost:7070/api/v1/blogs/');
             if (res.data.status === "true") {
                 seData(res.data.data);
                 setLoading(false);
@@ -67,7 +67,7 @@ const AllBlogs = () => {
                                         />
                                         <div>
                                             <h5 className="text-sm text-gray-800">
-                                                {blog.author}
+                                                {blog.author.name}
                                             </h5>
                                         </div>
                                     </div>

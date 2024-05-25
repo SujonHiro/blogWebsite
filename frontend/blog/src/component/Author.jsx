@@ -9,7 +9,7 @@ const Author = () => {
     const fetchWriters = async () => {
         try {
             setLoading(true);
-            const res = await axios.get('http://localhost:5000/api/v1/user');
+            const res = await axios.get('http://localhost:7070/api/v1/user');
             if (res.data.status === "success") {
                 setWriters(res.data.data);
                 setLoading(false);
