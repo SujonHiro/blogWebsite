@@ -9,7 +9,10 @@ function truncateText(text, maxLength) {
     }
     return text.slice(0, maxLength) + '...';
 }
-
+const formatDateString = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+};
 const AllBlogs = () => {
 
     const [data, seData] = useState([]);
@@ -18,7 +21,7 @@ const AllBlogs = () => {
     async function fetchBlogs() {
         try {
             setLoading(true);
-            const res = await axios.get('http://localhost:5000/api/v1/blogs/');
+            const res = await axios.get('http://localhost:7070/api/v1/blogs/');
             if (res.data.status === "true") {
                 seData(res.data.data);
                 setLoading(false);
@@ -62,13 +65,14 @@ const AllBlogs = () => {
                                     <div className="mt-auto flex items-center gap-x-3">
                                         <img
                                             className="size-8 rounded-full"
-                                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                                            src={blog.author.profileImg}
                                             alt="Image Description"
                                         />
                                         <div>
-                                            <h5 className="text-sm text-gray-800">
-                                                {blog.author}
+                                            <h5 className="text-sm text-gray-800 -mb-2">
+                                                {blog.author.name}
                                             </h5>
+                                            <span className="text-xs text-gray-800">{formatDateString(blog.createdAt)}</span>
                                         </div>
                                     </div>
                                 </div>
