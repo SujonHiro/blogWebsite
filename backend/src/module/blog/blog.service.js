@@ -26,7 +26,7 @@ const getBlogsServices=async (searchText,limit)=>{
             {content:{$regex:searchText,$options:"i"}}
         ]
     }
-    const blogs=await blogModel.find(query)
+    const blogs=await blogModel.find(query).populate('author', 'name profileImg')
         .limit(limit)
         .populate("comments")
     return blogs
