@@ -69,11 +69,9 @@ const AllBlogs = () => {
                                             alt="Image Description"
                                         />
                                         <div>
-<<<<<<< HEAD
-                                            <h5 className="text-sm text-gray-800">
-=======
+
                                             <h5 className="text-sm text-gray-800 -mb-2">
->>>>>>> 0e251fa61f45bc0098bb48653cda624d59ca24a7
+
                                                 {blog.author.name}
                                             </h5>
                                             <span className="text-xs text-gray-800">{formatDateString(blog.createdAt)}</span>
