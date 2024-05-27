@@ -1,0 +1,24 @@
+import React from "react";
+
+const Skeleton = () => {
+  return (
+    <>
+      <section className="bg-white py-20 dark:bg-dark">
+        <div className="container">
+          <div className="mx-auto w-full max-w-[370px]">
+            <div className="mb-7 flex h-[200px] w-full items-center justify-center rounded-xl bg-gradient-to-r from-gray-1 to-gray-4 text-secondary-color dark:from-dark-4 dark:to-dark-5">
+                
+            </div>
+            <div className="space-y-4">
+              <div className="h-3 w-full rounded-full bg-gradient-to-r from-gray-1 to-gray-4 dark:from-dark-4 dark:to-dark-5"></div>
+              <div className="h-3 w-4/6 rounded-full bg-gradient-to-r from-gray-1 to-gray-4 dark:from-dark-4 dark:to-dark-5"></div>
+              <div className="h-3 w-5/6 rounded-full bg-gradient-to-r from-gray-1 to-gray-4 dark:from-dark-4 dark:to-dark-5"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Skeleton;

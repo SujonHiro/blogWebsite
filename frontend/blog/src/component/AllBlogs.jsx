@@ -3,12 +3,13 @@ import axios from "axios";
 import Card from "./Card";
 import { Link } from "react-router-dom"
 import{truncateText,formatDateString} from '../utility/blogHelper'
+import Skeleton from "./layout/Skeleton";
 
 
 const AllBlogs = () => {
     const [data, seData] = useState([]);
     const [loading, setLoading] = useState(false);
-    
+
     async function fetchBlogs() {
         try {
             setLoading(true);
@@ -27,7 +28,7 @@ const AllBlogs = () => {
     }, [])
 
     if (loading) {
-        return <p className="my-[100px] text-center">Loading Data! Please Wait...</p>
+        return <Skeleton/>
     }
 
     return (
@@ -78,6 +79,7 @@ const AllBlogs = () => {
                         Load More
                     </button>
                 </div>
+                <Skeleton/>
             </div>
         </>
     );

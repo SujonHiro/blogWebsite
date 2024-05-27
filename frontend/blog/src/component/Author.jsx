@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import Skeleton from './layout/Skeleton';
 
 const Author = () => {
     const [loading, setLoading] = useState(false);
@@ -24,7 +25,7 @@ const Author = () => {
     }, []);
 
     if (loading) {
-        return <div className="my-[100px] text-center">Loading Data! Please Wait...</div>;
+        return <div className="my-[100px] text-center">Loading Please Wait</div>;
     }
     return (
         <div className="mx-auto max-w-7xl px-4 my-24 sm:px-6 lg:px-8">
